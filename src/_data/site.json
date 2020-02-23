@@ -2,11 +2,10 @@
   "showThemeCredit": false,
   "name": "Steve's Photog & Blog",
   "shortDesc": "Photography and blography, arts and farts, Steve Stoddard has it all, and it's all available here.",
-  "url": "https://stevesphotos.netlify.com",
+  "url": "https://steveandthesteves.netlify.com",
   "authorEmail": "steve@steveandthesteves.com",
   "authorName": "Steve Stoddard",
   "enableThirdPartyComments": false,
   "maxPostsPerPage": 8,
-  "paymentPointer": "$coil.xrptipbot.com/c1f8f05d-8d8c-4f37-b1ad-25677ae129da",
   "faviconPath": "/images/favicon.png"
 }
