@@ -53,6 +53,28 @@ hr {
   }
 }
 
+.home-photography,
+.home-paintings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .home-photo,
+  .home-painting {
+    flex: 1 0 50%;
+    img {
+      display: block;
+    }
+  }
+  .home-photo-more,
+  .home-painting-more {
+    flex: 1 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /**
  * PROJECT IMPORTS
  */

@@ -20,6 +20,36 @@
 {% block content %}
   <main id="main-content" tabindex="-1">
     {% include "partials/components/intro.njk" %}
+    {# <h2>Photography</h2> #}
+    <section class="home-photography">
+      <div class="home-photo">
+        <img src="/images/photography/bee-on-flower.jpg" alt="Bee Pollinating A Flower">
+      </div>
+      <div class="home-photo">
+        <img src="/images/photography/cloud-shadow.jpg" alt="Shadow of a Cloud">
+      </div>
+      <div class="home-photo">
+        <img src="/images/photography/disco-penguin.jpg" alt="Disco Penguin">
+      </div>
+      <div class="home-photo-more">
+        <h3><a href="/photography/">More Photography</a></h3>
+      </div>
+    </section>
+    {# <h2>Paintings</h2> #}
+    <section class="home-paintings">
+      <div class="home-painting">
+        <img src="/images/paintings/fox-and-trumpet.jpg" alt="Fox and Trumpet Player">
+      </div>
+      <div class="home-painting">
+        <img src="/images/paintings/.jpg" alt="">
+      </div>
+      <div class="home-painting">
+        <img src="/images/paintings/.jpg" alt="">
+      </div>
+      <div class="home-painting-more">
+        <a href="/paintings/">More Paintings</a>
+      </div>
+    </section>
     {% include "partials/components/post-list.njk" %}
     {% include "partials/components/pagination.njk" %}
   </main>
