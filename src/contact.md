@@ -9,7 +9,7 @@ action="https://formbucket.com/f/buk_XyGYu1sO6VnHtYP5WhQY7kjG">
 <input type="name" name="name" required>
 <input type="email" name="email" required>
 <input type="phone" name="phone">
-<textarea name="message" required>
+<textarea name="message" required></textarea>
 <button class="contact-submit g-recaptcha" data-sitekey="6Ld6h9sUAAAAADZtr4-r82pOF9swMvqrR_DsADsr" data-callback="contactPageSubmit">Send</button>
 <div class="form-response"></div>
 </form>
