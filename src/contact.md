@@ -9,8 +9,8 @@ action="https://formbucket.com/f/buk_XyGYu1sO6VnHtYP5WhQY7kjG">
 <h4>Questions & Unsolicited Advice</h4>
 <div class="input-group"><label for="name">Name:</label><br>
 <input type="name" name="name" required></div>
-<div class="input-group"><label for="email">Email:</label><br>
-<input type="email" name="email" required></div>
+<div class="input-group"><label for="_replyto">Email:</label><br>
+<input type="email" name="_replyto" required></div>
 <div class="input-group"><label for="phone">Phone (optional):</label><br>
 <input type="phone" name="phone"></div>
 <div class="input-group"><label for="message">Message:</label><br>
@@ -21,9 +21,9 @@ action="https://formbucket.com/f/buk_XyGYu1sO6VnHtYP5WhQY7kjG">
 
 <script>
 function contactPageSubmit(token) {
-    var $form = $(".contact-page-form");
-    var $btn = $('input[type=submit]', $form);
-    var $form_response = $('.contact-page-form .form-response');
+    var $form = $("form.contact");
+    var $btn = $('button.contact-submit', $form);
+    var $form_response = $('.form-response', $form);
 
     if ($("input[name='_replyto']").val() === '') {
         $form_response.removeClass('success');
