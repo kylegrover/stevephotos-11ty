@@ -15,17 +15,17 @@ action="https://formbucket.com/f/buk_XyGYu1sO6VnHtYP5WhQY7kjG">
 <input type="phone" name="phone"></div>
 <div class="input-group"><label for="message">Message:</label><br>
 <textarea name="message" required></textarea></div>
-<button class="contact-submit g-recaptcha" data-sitekey="6Ld6h9sUAAAAADZtr4-r82pOF9swMvqrR_DsADsr" data-callback="contactPageSubmit">Send</button>
+<input type="submit" class="contact-submit g-recaptcha" data-sitekey="6Ld6h9sUAAAAADZtr4-r82pOF9swMvqrR_DsADsr" data-callback="contactPageSubmit" value="Send">
 <div class="form-response"></div>
 </form>
 
 <script>
 function contactPageSubmit(token) {
     var $form = $("form.contact");
-    var $btn = $('button.contact-submit', $form);
+    var $btn = $('input[type="submit"]', $form);
     var $form_response = $('.form-response', $form);
 
-    if ($("input[name='_replyto']").val() === '') {
+    if ($("input[name='_replyto']").value === '') {
         $form_response.removeClass('success');
         $form_response.addClass('error');
         $form_response.html('Please enter an email address.');
