@@ -47,9 +47,9 @@ function contactPageSubmit(token) {
         .done(function (response) {
             $form_response.addClass('success');
             $form_response.removeClass('error');
-            $form_response.html('Thanks for contacting us, a representative will reach out to you as soon as possible');
+            $form_response.html('Wow... really? Well, I\'ll get back to you about that.');
             $btn.prop('disabled',false);
-            $form.children('input, textarea').val('');
+            $form.find('input, textarea').val('');
             $btn.val('Submit');
             console.log(response);
         })
