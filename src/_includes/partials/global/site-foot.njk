@@ -11,7 +11,7 @@
       {% endif %}
       <div>
         {% include "partials/components/nav.njk" %}
-        <theme-toggle></theme-toggle>
+        {% if site.showToggle %}<theme-toggle></theme-toggle>{% endif %}
       </div>
     </div>
     {% if site.showThemeCredit %}
@@ -21,3 +21,4 @@
     {% endif %}
   </div>
 </footer>
+<div class="copyright">© Steve Stoddard 2020 | Designed, Developed & Hosted by <a href="https://kylegrover.com" target="_blank">Kyle Grover</a></div>

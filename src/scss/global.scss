@@ -40,6 +40,19 @@ hr {
   margin: get-size(900) auto;
 }
 
+.copyright {
+  padding: 5px;
+  text-align: center;
+  background: #222;
+  color: #ccc;
+  font-size: 14px;
+  a, a:hover, a:visited {
+    color: #eee;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
 /**
  * PROJECT IMPORTS
  */
