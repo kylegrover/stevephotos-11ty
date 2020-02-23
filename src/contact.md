@@ -11,7 +11,7 @@ action="https://formbucket.com/f/buk_XyGYu1sO6VnHtYP5WhQY7kjG">
 <input type="name" name="name" required></div>
 <div class="input-group"><label for="email">Email:</label><br>
 <input type="email" name="email" required></div>
-<div class="input-group"><label for="phoine">Phone (optional):</label><br>
+<div class="input-group"><label for="phone">Phone (optional):</label><br>
 <input type="phone" name="phone"></div>
 <div class="input-group"><label for="message">Message:</label><br>
 <textarea name="message" required></textarea></div>
