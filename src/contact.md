@@ -29,11 +29,11 @@ function contactPageSubmit(token) {
         $form_response.removeClass('success');
         $form_response.addClass('error');
         $form_response.html('Please enter an email address.');
-        return
+        return false;
     }
 
     $.ajax({
-            url: $form.action,
+            url: $form.prop('action'),
             type: 'POST',
             crossDomain: true,
             headers: {
@@ -41,14 +41,14 @@ function contactPageSubmit(token) {
             },
             data: $form.serialize(),
             beforeSend: function () {
-                $btn.disabled = 'disabled';
+                $btn.prop('disabled','disabled');
             }
         })
         .done(function (response) {
             $form_response.addClass('success');
             $form_response.removeClass('error');
             $form_response.html('Thanks for contacting us, a representative will reach out to you as soon as possible');
-            $btn.disabled = false;
+            $btn.prop('disabled',false);
             $form.children('input, textarea').val('');
             $btn.val('Submit');
             console.log(response);
@@ -57,7 +57,7 @@ function contactPageSubmit(token) {
             $form_response.removeClass('success');
             $form_response.addClass('error');
             $form_response.html('Something went wrong, check the fields for errors and try submitting again');
-            $btn.disabled = false;
+            $btn.prop('disabled',false);
         })
 };
 </script>
