@@ -20,46 +20,44 @@ action="https://formbucket.com/f/buk_XyGYu1sO6VnHtYP5WhQY7kjG">
 </form>
 
 <script>
-jQuery(document).ready(function($){
-    function contactPageSubmit(token) {
-        var $form = $("form.contact");
-        var $btn = $('input[type="submit"]', $form);
-        var $form_response = $('.form-response', $form);
+function contactPageSubmit(token) {
+    var $form = $("form.contact");
+    var $btn = $('input[type="submit"]', $form);
+    var $form_response = $('.form-response', $form);
 
-        if ($("input[name='_replyto']").value === '') {
+    if ($("input[name='_replyto']").value === '') {
+        $form_response.removeClass('success');
+        $form_response.addClass('error');
+        $form_response.html('Please enter an email address.');
+        return
+    }
+
+    $.ajax({
+            url: $form.action,
+            type: 'POST',
+            crossDomain: true,
+            headers: {
+                'accept': 'application/javascript',
+            },
+            data: $form.serialize(),
+            beforeSend: function () {
+                $btn.disabled = 'disabled';
+            }
+        })
+        .done(function (response) {
+            $form_response.addClass('success');
+            $form_response.removeClass('error');
+            $form_response.html('Thanks for contacting us, a representative will reach out to you as soon as possible');
+            $btn.disabled = false;
+            $form.children('input, textarea').val('');
+            $btn.val('Submit');
+            console.log(response);
+        })
+        .fail(function (response) {
             $form_response.removeClass('success');
             $form_response.addClass('error');
-            $form_response.html('Please enter an email address.');
-            return
-        }
-
-        $.ajax({
-                url: $form.action,
-                type: 'POST',
-                crossDomain: true,
-                headers: {
-                    'accept': 'application/javascript',
-                },
-                data: $form.serialize(),
-                beforeSend: function () {
-                    $btn.disabled = 'disabled';
-                }
-            })
-            .done(function (response) {
-                $form_response.addClass('success');
-                $form_response.removeClass('error');
-                $form_response.html('Thanks for contacting us, a representative will reach out to you as soon as possible');
-                $btn.disabled = false;
-                $form.children('input, textarea').val('');
-                $btn.val('Submit');
-                console.log(response);
-            })
-            .fail(function (response) {
-                $form_response.removeClass('success');
-                $form_response.addClass('error');
-                $form_response.html('Something went wrong, check the fields for errors and try submitting again');
-                $btn.disabled = false;
-            })
-    };
-})
+            $form_response.html('Something went wrong, check the fields for errors and try submitting again');
+            $btn.disabled = false;
+        })
+};
 </script>
