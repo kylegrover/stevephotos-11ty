@@ -2,22 +2,25 @@
 layout: layouts/page.njk
 title: Yeah yeah whadya want?
 ---
-I have prints and original paintings for sale. If you see something you like just let me know.<br><br>I also do custom artwork, including paintings and murals, and professional photography for events and businesses. 
+<div>I have prints and original paintings for sale. If you see something you like just let me know.<br><br>I also do custom artwork, including paintings and murals, and professional photography for events and businesses. </div>
 
-<form class="contact" method="post"
-action="https://formbucket.com/f/buk_XyGYu1sO6VnHtYP5WhQY7kjG">
-<h4>Questions & Unsolicited Advice</h4>
-<div class="input-group"><label for="name">Name:</label><br>
-<input type="name" name="name" required></div>
-<div class="input-group"><label for="_replyto">Email:</label><br>
-<input type="email" name="_replyto" required></div>
-<div class="input-group"><label for="phone">Phone (optional):</label><br>
-<input type="phone" name="phone"></div>
-<div class="input-group"><label for="message">Message:</label><br>
-<textarea name="message" required></textarea></div>
-<button class="contact-submit g-recaptcha" data-sitekey="6Ld6h9sUAAAAADZtr4-r82pOF9swMvqrR_DsADsr" data-callback="contactPageSubmit">Send</button>
-<div class="form-response"></div>
-</form>
+<div class="flex-768">
+    <form class="contact" method="post"
+    action="https://formbucket.com/f/buk_XyGYu1sO6VnHtYP5WhQY7kjG">
+        <h4>Questions & Unsolicited Advice</h4>
+        <div class="input-group"><label for="name">Name:</label><br>
+        <input type="name" name="name" required></div>
+        <div class="input-group"><label for="_replyto">Email:</label><br>
+        <input type="email" name="_replyto" required></div>
+        <div class="input-group"><label for="phone">Phone (optional):</label><br>
+        <input type="phone" name="phone"></div>
+        <div class="input-group"><label for="message">Message:</label><br>
+        <textarea name="message" required></textarea></div>
+        <button class="contact-submit g-recaptcha" data-sitekey="6Ld6h9sUAAAAADZtr4-r82pOF9swMvqrR_DsADsr" data-callback="contactPageSubmit">Send</button>
+        <div class="form-response"></div>
+    </form>
+    <div class="contact-picture" style="margin: 10px; border-radius: 10px; background-image:url('../images/steve-painted.jpg'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;min-height: 400px; "></div>
+</div>
 
 <script>
 function contactPageSubmit(token) {
